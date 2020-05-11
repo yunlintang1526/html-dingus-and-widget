@@ -1,0 +1,90 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+html{
+    margin: 0.5%;
+}
+
+h1, h3{
+    font-family: 'Paytone One', sans-serif;
+}
+
+#logo {
+    height:50px;
+    width:100px;
+    float:left;
+}
+
+.flex-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.flex-item{
+    text-align: center;
+    width: 33%;
+    height: 40px;
+}
+
+.flex-item p{
+    color:blue;
+    font-size: x-large;
+}
+
+#green-text{
+    color: green;
+}
+
+table{
+    margin-left:auto;
+    margin-right:auto;
+    border: 1px solid black;
+    text-align: center;
+    width:75%;
+    border-collapse: collapse;
+}
+
+td, th{
+    border-style: solid;
+}
+
+.gray{
+    background-color: lightgray;
+}
+
+form{
+    padding: 1%;
+}
+
+#form-line{
+    border-top: 1px solid gray;
+}
+
+fieldset{
+    border: none;
+}
+
+.button-success, .button-error{
+    color:white;
+    border-radius: 4px;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.2);
+}
+
+.button-success{
+    background: rgb(28, 184, 65);
+}
+
+.button-error{
+    background: rgb(202, 60, 60);
+}
+
+input:invalid {
+    border: red;
+}
+
+input[type=number] {
+    width: 100px;
+}
