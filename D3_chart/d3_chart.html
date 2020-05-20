@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>DSC106-HW04-D3Chart</title>
+
+        <meta name='description' content='report for the Dingus&Widget company'>
+        <meta name='author' content='Yunlin Tang'>
+        <meta charset='UTF-8'>
+
+        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous">   
+        <link rel='stylesheet' href='d3_chart.css'>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat%7CPaytone+One&display=swap" rel="stylesheet" />
+
+
+    </head>
+
+    <body onload='initial_value()'>
+        <header>
+            <img src='dw-logo.png' alt='Dingus & Widget Company' id='logo'>
+            <h1>Global Dashboard</h1>
+        </header>
+
+        <main>
+            
+            <div class='flex-container'>
+                <div class='flex-item'><h3>Dingus</h3></div>
+                <div class='flex-item'><h3>Widget</h3></div>
+                <div class='flex-item'><h3>Sales</h3></div>
+                <div class='flex-item'><p id='dingus-total'>0</p></div>
+                <div class='flex-item'><p id='widget-total'>0</p></div>
+                <div class='flex-item'><p id='sale-total'><span id='green-text'>$</span>0.00</p></div>
+            </div>
+
+            <br>
+            <hr>
+
+            <div class='flex-container2'>
+                <div class='flex2-item1' id='pie-chart' style='height:100%; width:100%;'></div>
+                <div class='flex2-item2' id='line-chart' style='height:100%; width:100%;'></div>
+            </div>
+
+            <br>
+            <hr>
+
+
+            <table id='order'>
+                <caption>Order History</caption>
+                <colgroup>
+                    <col class='gray'>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                </colgroup>
+
+                <thead>
+                    <tr>
+                        <th rowspan="2" class='col1'>ID#</th>
+                        <th rowspan="2">Date</th>
+                        <th colspan="2">Quantity</th>
+                        <th rowspan="2">Total</th>
+                        <th rowspan="2" class='col2'>Payment</th>
+                    </tr>
+
+                    <tr>
+                        <th>Dingus</th>
+                        <th>Widget</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                </tbody>
+
+                <tfoot>
+                    <tr>
+                        <td colspan='6' id='last-row'>&copy; 2020 D&W Worldwide.</td>
+                    </tr>
+                </tfoot>
+            </table>
+
+            <br>
+
+            <details>
+                <summary>Order Form</summary>
+                <hr id='form-line'>
+
+                <form class='pure-form'>
+                    <fieldset>
+                        <div>
+                            <label>Dingus</label>
+                            <input id='dingus-amount' type='number' value=0 min=0 onkeyup='update_value()'>
+                            <label>@</label>
+                            <input id='dingus-order1' type='text' disabled>
+                            <label>= $</label>
+                            <input id='dingus-order2' type='text' disabled>
+                        </div>
+    
+                        <br>
+                        
+                        <div>
+                            <label>Widget</label>
+                            <input id='widget-amount' type='number' value=0 min=0 onkeyup="update_value()">
+                            <label>@</label>
+                            <input id='widget-order1' type='text' disabled>
+                            <label>= $</label>
+                            <input id='widget-order2' type='text' disabled>
+                        </div>
+    
+                        <br>
+                        
+                        <div>
+                            <label>Total $</label>
+                            <input id='total' type='text' disabled>
+                        </div>
+    
+                        <br>
+    
+                        <div>
+                            <label>Payment</label><br>
+                            <select multiple id='payment' oninput='enable_order()'>
+                                <option value='Visa'>Visa</option>
+                                <option value='MasterCard'>MasterCard</option>
+                                <option value='Paypal'>Paypal</option>
+                            </select>
+                        </div>
+    
+                        <br>
+                        <input type='button' value='Cancel' class='pure-button button-error' onclick='reset_form()'>
+                        <input id='order-button' type='button' value='Order' class='pure-button button-success' disabled onclick='update_table()'>
+                        
+                    </fieldset>
+                </form>
+            </details>
+        </main>
+
+        <footer> 
+        </footer>
+        
+    </body>
+
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src='d3_chart.js'></script>
+</html>
