@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>DSC106-HW05</title>
+
+        <meta name='description' content='report for the Dingus&Widget company'>
+        <meta name='author' content='Yunlin Tang'>
+        <meta charset='UTF-8'>
+
+        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous">   
+        <link rel='stylesheet' href='style.css'>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat%7CPaytone+One&display=swap" rel="stylesheet" />
+
+        <script src='hint_2.js'></script>
+
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/modules/exporting.js"></script>
+        <script src="https://code.highcharts.com/modules/export-data.js"></script>
+        <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+        <script src="https://code.highcharts.com/maps/modules/map.js"></script>
+        <script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
+        <script src="https://code.highcharts.com/mapdata/custom/world-continents.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.1/moment.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.14/moment-timezone-with-data.min.js"></script>
+        <script src="https://code.highcharts.com/modules/stock.js"></script>
+
+    </head>
+
+    <body>
+        <header>
+            <img src='dw-logo.png' alt='Dingus & Widget Company' id='logo'>
+            <h1>Global Dashboard</h1>
+        </header>
+
+        <main>
+            
+            <section><div id='myMap'></div></section>
+
+            <br>
+            
+            <div class='flex-container'>
+                <div class='flex-item'><h3>Dingus</h3></div>
+                <div class='flex-item'><h3>Widget</h3></div>
+                <div class='flex-item'><h3>Sales</h3></div>
+                <div class='flex-item'><p id='dingus-total'>0</p></div>
+                <div class='flex-item'><p id='widget-total'>0</p></div>
+                <div class='flex-item'><p id='sale-total'><span id='green-text'>$</span>0.00</p></div>
+            </div>
+
+            <br><br>
+            <hr>
+
+            <div class='flex-container2'>
+                <div class='flex2-item1' id='line-chart' ></div>
+                <div class='flex2-item2' id='pie-chart'></div>
+            </div>
+
+            <br>
+            <hr>
+
+            <section><div id='myArea'></div></section>
+            
+
+        </main>
+
+        <footer> 
+        </footer>
+    </body>
+
+    <script src='hw05.js'></script>
+</html>
